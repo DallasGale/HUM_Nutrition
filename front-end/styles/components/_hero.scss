@@ -10,6 +10,16 @@
       padding-top: 140px;
     }
 
+    &-content {
+      width: 50%;
+      margin-left: 50%;
+
+      @include respond-to(phone-down) {
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+
     &--productHeadline {
       max-width: 450px;
       margin-left: 4px;

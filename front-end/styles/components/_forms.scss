@@ -20,7 +20,7 @@
     &-control {
 
       &--input {
-        padding: 18px;
+        padding-left: 18px;
         height: 46px;
         width: 238px;
         @include noBorder;
@@ -42,31 +42,16 @@ input[type=text] {
 }
 
 
-input::-webkit-input-placeholder {
+#sign-up::-webkit-input-placeholder {
   @include formInput;
 }
 
 
-input:-moz-placeholder {
-  @include formInput;
+#sign-up:-ms-input-placeholder {
+  font-family: 'Neutraface' !important;
+  color: #000000 !important;
 }
 
-
-input::-moz-placeholder {
-  @include formInput;
-}
-
-
-input:-ms-input-placeholder {
-  @include formInput;
-}
-
-
-input::-ms-input-placeholder {
-  @include formInput;
-}
-
-
-input::placeholder {
+#sign-up::placeholder {
   @include formInput;
 }
