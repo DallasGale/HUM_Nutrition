@@ -25,16 +25,28 @@
 // Place any jQuery/helper plugins in here.
 $(function() {
   console.log('jquery works');
+  if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+    // alert('Its Safari');
+    $('.c-callout-hidden').css({
+      transform: translateY(0)
+    })
+  } else {
 
-  // show & hide callout
-  let prev = 0;
-  const $window = $(window);
-  const el = $('#c-callout');
+    // show & hide callout
+    let prev = 30;
+    const $window = $(window);
+    const el = $('#c-callout');
 
-  $window.on('scroll', () => {
-    let scrollTop = $window.scrollTop();
-        el.toggleClass('c-callout-hidden', scrollTop > prev);
-        prev =  scrollTop;
-  });
+    $window.on('scroll', () => {
+      let scrollTop = $window.scrollTop();
+          el.toggleClass('c-callout-hidden', scrollTop > prev);
+          prev =  scrollTop;
+    });
+
+
+  }
+
+
+
 
 });
