@@ -1,0 +1,13 @@
+.e {
+
+  &-cart {
+
+    &--items {
+      color: $white;
+      background: $pink;
+      border-radius: 100px;
+      padding: 3px 6px;
+      @include rem(font-size, 1.4rem);
+    }
+  }
+}

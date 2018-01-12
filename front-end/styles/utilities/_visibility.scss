@@ -1,0 +1,12 @@
+.u-opac {
+
+  &--1 {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  &--0 {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

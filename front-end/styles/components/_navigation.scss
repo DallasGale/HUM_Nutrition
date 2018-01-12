@@ -1,0 +1,129 @@
+// bootstrap overides
+// hamburger
+
+.navbar-toggle {
+  margin-right: 0;
+  margin-top: 0;
+  padding: 28px 0 0 0;
+
+  .icon-bar {
+    background-color: $pink;
+    width: 30px;
+    margin-bottom: 5px;
+    height: 3px;
+  }
+}
+
+
+.navbar-collapse.collapse {
+  float: right;
+}
+
+
+.navbar-header {
+  width: 100%;
+  height: 80px;
+  border: 0;
+
+  @include respond-to(tablet-down) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.navbar {
+  margin-bottom: 0;
+  min-height: 0;
+}
+
+.c {
+
+  &-navigation {
+    display: block;
+    @include respond-to(phone-down) {
+      height: auto;
+    }
+
+    &-logo {
+      display: block;
+      background: url('../images/logo-pink.svg') no-repeat center center;
+      background-size: 100%;
+      max-width: 270px;
+      width: 100%;
+      min-height: 42px;
+      height: auto;
+      @include textIndent;
+
+      @include respond-to(phone-down){
+        max-width: 315px;
+        background-size: 90%;
+        min-height: 0;
+        height: 80px;
+        background-position: left 20px top 10px;
+      }
+    }
+
+
+    &-menu {
+      float: right;
+      list-style: none;
+      padding-top: 22px;
+      padding-left: 0;
+      @include textRight;
+
+      @include respond-to(phone-down) {
+        width: 100%;
+        text-align: center;
+        display: block;
+      }
+
+      &--items {
+        display: inline-block;
+        text-transform: uppercase;
+        padding-left: 15px;
+        @include respond-to(phone-down) {
+          padding-left: 0;
+          width: 100%;
+          text-align: center;
+          padding-bottom: 30px;
+        }
+
+        &__link {
+          color: $pink;
+          text-decoration: none !important;
+          display: inline-block;
+          text-align: center;
+          border-bottom: 2px solid rgba(0,0,0,0);
+          @include rem(font-size, 1.4rem);
+          @include hover-transition;
+
+          &.products {
+            width: 80px;
+          }
+
+          &.blog {
+            width: 40px;
+          }
+
+          &.our-nutritionists {
+            width: 145px;
+          }
+
+          &.get-started {
+            width: 100px;
+          }
+
+          &.cart {
+            width: 40px;
+          }
+
+          &:hover {
+            border-bottom-color: $pink;
+            color: $pink;
+            @include textBold;
+          }
+        }
+      }
+    }
+  }
+}

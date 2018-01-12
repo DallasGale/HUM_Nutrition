@@ -1,0 +1,74 @@
+.c {
+
+  &-reviews {
+    background: url('../images/reviews-bg.jpg') no-repeat center center;
+    background-size: 1346px;
+
+    &-content {
+
+      &-items {
+        list-style: none;
+        padding-left: 0;
+        padding-top: 52px;
+        margin-bottom: 120px;
+
+        &--item {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          @include textCenter;
+          @include hover-transition;
+
+          &:hover {
+            @include shadowSpreadLight;
+          }
+
+          &.first {
+            padding-left: 0;
+            left: -20px;
+            padding-right: 0;
+          }
+
+          &.second {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+          &.third {
+            padding-left: 0;
+            left: 10px;
+            padding-right: 0;
+          }
+
+          &.fourth {
+            padding-left: 0;
+            padding-right: 0;
+            left: 23px;
+          }
+        }
+      }
+
+      &--thumbnail {
+        display: block;
+        width: 100%;
+        max-width: 119px;
+        margin: 0 auto;
+        padding-bottom: 15px;
+      }
+
+      &--comment {
+        display: block;
+        color: $black;
+        @include rem(font-size, 1.72rem);
+        padding-left: 2px;
+        padding-right: 2px;
+        min-height: 226px;
+        hyphens: auto;
+      }
+    }
+
+    .reviewer {
+      display: inline-block;
+      color: $pink;
+    }
+  }
+}

@@ -1,0 +1,151 @@
+.c {
+
+  &-callout {
+    display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: #000000;
+    height: 30px;
+    transition: all 0.4s;
+
+    &-wrapper {
+      display: block;
+      @include pageWidth;
+
+      &--item {
+        @include rem(font-size, 1.3rem);
+        display: inline-block;
+        color: $white;
+        float: left;
+        padding: 6px 0;
+
+        &-trial {
+          background: $white;
+          width: 226px;
+
+          &__lhs, &__rhs {
+            display: inline-block;
+            width: 38px;
+            height: 30px;
+          }
+
+          &__lhs {
+            background: url('../images/icons/free-trial-lhs.gif') center center;
+            background-repeat: no-repeat;
+            background-size: 38px;
+            float: left;
+          }
+
+          &__center {
+            display: inline-block;
+            color: $black;
+            width: 150px;
+            padding-top: 4px;
+            @include rem(font-size, 1.5rem);
+            @include textUppercase;
+            @include textCenter;
+
+            a {
+              color: $black;
+            }
+          }
+
+          &__rhs {
+            background: url('../images/icons/free-trial-rhs.gif') center center;
+            background-repeat: no-repeat;
+            background-size: 38px;
+            float: right;
+          }
+          @include respond-to(tablet-down) {
+            display: none;
+          }
+        }
+
+        &__available {
+          width: 298px;
+          @include textBold;
+
+
+
+          @include respond-to(tablet-down) {
+            font-weight: normal;
+            width: 100%;
+            text-align: center;
+
+            .hum {
+              @include textBold;
+            }
+
+            .sephora {
+              @include textBold;
+            }
+          }
+        }
+
+
+        &__shipping {
+          width: 248px;
+          @include textBold;
+
+          @include respond-to(tablet-down) {
+            display: none;
+          }
+        }
+
+
+        &__contact {
+          width: 116px;
+          @include textBold;
+
+          @include respond-to(tablet-down) {
+            display: none;
+          }
+
+          a {
+            color: $white;
+          }
+        }
+
+        &__login {
+          position: absolute;
+          @include hover-transition;
+          @include textBold;
+
+          &:hover {
+            color: $pink;
+          }
+
+          @include respond-to(tablet-down) {
+            display: none;
+          }
+        }
+      }
+
+
+      &--icon {
+        width: 100%;
+
+        &__delivery {
+          max-width: 16px;
+        }
+
+        &__phone {
+          max-width: 9px;
+        }
+      }
+    }
+
+
+    &-hidden {
+      transform: translateY(-100%);
+
+      @include respond-to(tablet-down) {
+        transform:none;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.c {
+
+  &-asSeenIn {
+
+    &-content {
+
+      &--title {
+        font-family: Neutraface;
+        margin-bottom: 20px;
+        color: $black;
+        @include rem(font-size, 1.6rem);
+        @include textUppercase;
+        @include textCenter;
+      }
+
+
+      &--list {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          display: inline-block;
+        }
+      }
+
+
+      &--logos {
+        background: url('../images/logo-sprite.gif') no-repeat;
+        background-size: 969px;
+        width: 100%;
+        height: 55px;
+        display: inline-block;
+        border-bottom: 3px solid rgba(0,0,0,0);
+        @include textIndent;
+        @include hover-transition;
+
+        &:hover {
+          @include shadowSpreadLight;
+        }
+
+        &__refinery {
+          background-position: top left -7px;
+          width: 60px;
+        }
+
+        &__us {
+          background-position: top left -69px;
+          width: 78px;
+        }
+
+        &__bazaar {
+          background-position: top left -153px;
+          width: 149px;
+        }
+
+        &__nylon {
+          background-position: top left -310px;
+          width: 190px;
+        }
+
+        &__coveteur {
+          background-position: top left -509px;
+          width: 195px;
+        }
+
+        &__mclaire {
+          background-position: top left -703px;
+          width: 240px;
+        }
+      }
+    }
+  }
+}

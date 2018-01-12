@@ -1,0 +1,15 @@
+.e {
+
+  &-icons {
+
+    &--stars {
+
+      @include rem(font-size, 2.7rem);
+      color: $lightGrey;
+
+      &__rated {
+        color: $pink;
+      }
+    }
+  }
+}

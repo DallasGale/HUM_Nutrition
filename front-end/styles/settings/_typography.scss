@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Neutraface;
+  src: url('../fonts/Neutraface_display-bold.woff2') format('woff2'),
+  url('../fonts/Neutraface_display-bold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: ProximaNova;
+  src: url('../fonts/ProximaNovaAltRegular-webfont.woff') format('woff');
+}
+
+
+@mixin myriad {
+  font-family: "myriad",sans-serif;
+}
+
+
+// font sizing
+@mixin font-size--xs {
+  font-size: 0.7rem;
+}
+
+
+@mixin font-size--sm {
+  font-size: 0.9rem;
+}
+
+
+@mixin font-size--md {
+  font-size: 1.1rem;
+}
+
+
+@mixin font-size--lg {
+  font-size: 24px;
+}
+
+
+@mixin font-size--xl {
+  font-size: 32px;
+}

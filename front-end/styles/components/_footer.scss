@@ -1,0 +1,131 @@
+.c {
+
+  &-footer {
+    height: auto;
+    background: #000000;
+    width: 100%;
+    display: block;
+    margin-top: 100px;
+    padding-top: 60px;
+    padding-bottom: 63px;
+
+    &-content {
+
+      &-navigation {
+        padding-bottom: 78px;
+
+        &-list {
+          padding-left: 0;
+
+          &--items {
+            margin-bottom: 4px;
+          }
+
+          &--link {
+            color: $lightGrey;
+            font-family: ProximaNova;
+            @include rem(font-size, 1.4rem);
+            @include hover-transition;
+
+            &:hover {
+              color: $white;
+            }
+          }
+        }
+      }
+
+      &-smallprint {
+        display: block;
+        width: 100%;
+        max-width: 780px;
+        margin: 0 auto;
+        padding-bottom: 47px;
+
+        &--text {
+          padding-bottom: 25px;
+          display: block;
+          color: $lightGrey;
+          @include textCenter;
+          @include rem(font-size, 1.2rem);
+
+          .illustrator {
+            color: $pink;
+            margin-left: 20px;
+            @include hover-transition;
+
+            &:hover {
+              color: $white;
+            }
+          }
+        }
+      }
+
+      &-floor {
+
+        &--logo {
+          background: url('../images/logo-sprite.gif') no-repeat;
+          background-position: top -60px left;
+          background-size: 969px;
+          width: 90px;
+          height: 45px;
+          display: inline-block;
+          float: left;
+        }
+
+        &-social {
+          padding-left: 0;
+          list-style: none;
+          display: inline-block;
+          float: right;
+          padding-top: 18px;
+
+          &--icons {
+            display: inline-block;
+            height: 20px;
+            margin-left: 27px;
+            background: url('../images/icons/icon-sprite.gif');
+            background-size: 360px;
+            background-repeat: no-repeat;
+            @include textIndent;
+
+            &__facebook {
+              background-position: top -206px left -208px;
+              width: 10px;
+
+              &:hover {
+                background-position: top -226px left -208px;
+              }
+            }
+
+            &__twitter {
+              background-position: top -206px left -224px;
+              width: 23px;
+
+              &:hover {
+                background-position: top -226px left -224px;
+              }
+            }
+
+            &__youtube {
+              background-position: top -206px left -180px;
+              width: 25px;
+
+              &:hover {
+                background-position: top -226px left -180px;
+              }
+            }
+
+            &__instagram {
+              background-position: top -206px left -248px;
+              width: 20px;
+
+              &:hover {
+                background-position: top -226px left -248px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

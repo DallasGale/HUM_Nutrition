@@ -1,0 +1,15 @@
+.c {
+
+  &-header {
+    padding-top: 37px;
+    margin: 30px auto;
+
+    @include respond-to(phone-down) {
+      z-index: 12;
+      position: fixed;
+      background: $white;
+      padding-top: 0;
+      @include shadowVertBottom;
+    }
+  }
+}

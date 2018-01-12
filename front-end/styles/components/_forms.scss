@@ -1,0 +1,72 @@
+.c {
+
+  &-form {
+
+    &-wrapper {
+      background: $pink;
+      display: inline-block;
+      width: auto;
+      padding: 3px;
+      margin-left: 4px;
+
+      @include respond-to(tablet-down) {
+        display: block;
+        width: 307px;
+        margin-left: 0px;
+        margin: 0 auto;
+      }
+    }
+
+    &-control {
+
+      &--input {
+        padding: 18px;
+        height: 46px;
+        width: 238px;
+        @include noBorder;
+      }
+
+      &--button {
+        background: none;
+        padding: 0 16px;
+        height: auto;
+        color: $white;
+        @include noBorder;
+      }
+    }
+  }
+}
+
+input[type=text] {
+  @include formInput;
+}
+
+
+input::-webkit-input-placeholder {
+  @include formInput;
+}
+
+
+input:-moz-placeholder {
+  @include formInput;
+}
+
+
+input::-moz-placeholder {
+  @include formInput;
+}
+
+
+input:-ms-input-placeholder {
+  @include formInput;
+}
+
+
+input::-ms-input-placeholder {
+  @include formInput;
+}
+
+
+input::placeholder {
+  @include formInput;
+}

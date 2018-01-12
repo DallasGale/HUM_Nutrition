@@ -1,0 +1,209 @@
+.c {
+
+  &-features {
+
+    &.why {
+      background: url('../images/features-bg.jpg') no-repeat;
+      background-size: 1551px;
+      background-position: top 150px center;
+    }
+
+    &-content {
+      background: url('../images/advantages-bg.png') no-repeat;
+      background-position: bottom;
+      max-width: 1360px;
+      margin: 0 auto;
+      margin-bottom: 134px;
+      @include textCenter;
+
+      &--paragraph {
+        padding-bottom: 55px;
+      }
+
+      &-list {
+        max-width: 490px;
+        margin: 0 auto;
+        margin-bottom: 126px;
+        list-style: none;
+
+        &--items {
+          padding: 10px 0 10px 52px;
+          font-family: 'Neutraface';
+          @include textLeft;
+          @include rem(font-size, 2.2rem);
+
+          .bullet {
+            background: url('../images/icons/icon-sprite.gif');
+            background-size: 780px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            position: absolute;
+            margin-left: -50px;
+            margin-top: -4px;
+
+            &.first {
+              background-position: top -392px left -390px;
+            }
+
+            &.second {
+              background-position: top -392px left -430px;
+            }
+
+            &.third {
+              background-position: top -392px left -471px;
+            }
+
+            &.fourth {
+              background-position: top -392px left -510px;
+            }
+
+            &.fifth {
+              background-position: top -392px left -547px;
+            }
+          }
+        }
+      }
+
+
+      &-advantages {
+        display: block;
+        background: $white;
+        max-width: 720px;
+        width: 100%;
+        margin: 0 auto;
+        border: 3px solid $black;
+        margin-bottom: 378px;
+
+        &--head {
+          max-width: 70%;
+          margin: 0 auto;
+
+          &__title {
+            font-family: 'Neutraface';
+            padding: 33px 0 33px 0;
+            @include rem(font-size, 2.4rem);
+            @include textUppercase;
+
+            @include respond-to(phone-down) {
+              @include rem(font-size, 1.4rem);
+            }
+
+            .versus {
+              padding-left: 24px;
+              padding-right: 24px;
+            }
+          }
+        }
+
+        &-body {
+
+          &-cell {
+            padding-top: 0;
+            padding-bottom: 0;
+            @include hover-transition;
+
+            &:hover {
+              background: rgba(0,0,0,0.05);
+            }
+
+            &__border {
+              width: 100%;
+              display: block;
+              border-right: 1px solid $black;
+              position: absolute;
+              top: 14px;
+              right: 0;
+              height: 70px;
+            }
+
+            &--icon {
+              width: 80px;
+              height: 105px;
+              background: url('../images/icons/icon-sprite.gif');
+              background-size: 510px;
+              background-repeat: no-repeat;
+              display: inline-block;
+              float: left;
+
+              // row 1
+              &__vegan {
+                background-position: top 8px left -5px;
+                background-size: 370px;
+              }
+
+              &__animal {
+                background-position: top -3px left -129px;
+                background-size: 440px;
+              }
+
+              // row 2
+              &__non-gmo{
+                background-position: top -10px left -280px;
+              }
+
+              &__gmo{
+                background-position: top -10px left -410px;
+              }
+
+              // row 3
+              &__no-artificials{
+                background-position: top -120px left -19px;
+                background-size: 460px;
+              }
+
+              &__artificial {
+                background-position: top -125px left -138px;
+                background-size: 460px;
+              }
+
+              // row 4
+              &__no-hfcs {
+                background-position: top -123px left -253px;
+                background-size: 470px;
+              }
+
+              &__hfcs {
+                background-position: top -123px left -377px;
+                background-size: 470px;
+              }
+
+              // row 5
+              &__lo-sugar {
+                background-position: top -285px left -23px;
+                background-size: 540px;
+              }
+
+              &__sugar {
+                background-position: top -230px left -126px;
+                background-size: 440px;
+              }
+            }
+
+            &--label {
+              font-family: 'Neutraface';
+              padding-left: 14px;
+              @include rem(font-size, 1.8rem);
+              @include rem(line-height, 1.8rem);
+
+              @include respond-to(phone-down) {
+                @include rem(font-size, 1.5rem);
+                @include rem(line-height, 1.5rem);
+              }
+            }
+          }
+
+          &-table {
+            height: 105px;
+          }
+        }
+
+        &-row {
+          height: 105px;
+          border-top: 1px solid $black;
+        }
+      }
+    }
+  }
+}

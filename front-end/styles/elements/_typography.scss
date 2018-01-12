@@ -1,0 +1,71 @@
+h1, h2, h3, h4 {
+  font-family: 'Neutraface';
+  @include textUppercase;
+}
+
+
+p {
+  font-family: 'ProximaNova';
+  @include rem(line-height , 2.4rem);
+  @include rem(font-size, 1.8rem);
+}
+
+
+h1 {
+  @include rem(font-size, 4.8rem);
+
+  @include respond-to(phone-down) {
+    @include rem(font-size, 3.6rem);
+  }
+}
+
+
+h2 {
+  padding-bottom: 29px;
+  @include textCenter;
+  @include rem(font-size, 3.6rem);
+}
+
+
+h3 {
+  @include rem(font-size, 2.4rem);
+}
+
+
+h4 {
+  @include rem(font-size, 3.6rem);
+}
+
+
+small {
+  font-family: ProximaNova;
+}
+
+
+.e {
+
+  &-text {
+
+    &-align {
+
+      &__left {
+        @include textLeft;
+      }
+
+      &__center {
+        @include textCenter;
+      }
+
+      &__right {
+        @include textRight;
+      }
+    }
+
+    &-color {
+
+      &__pink {
+        color: $pink;
+      }
+    }
+  }
+}

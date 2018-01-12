@@ -1,0 +1,36 @@
+.c {
+
+  &-hero {
+    height: 700px;
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+
+    @include respond-to(phone-down) {
+      padding-top: 140px;
+    }
+
+    &--productHeadline {
+      max-width: 450px;
+      margin-left: 4px;
+      @include textUppercase;
+
+      @include respond-to(phone-down) {
+        margin-left: 0;
+        max-width: 100%;
+        @include textCenter;
+      }
+    }
+
+    &--paragraph {
+      margin-top: 22px;
+      margin-bottom: 49px;
+      margin-left: 4px;
+
+      @include respond-to(phone-down) {
+        margin-left: 0px;
+        @include textCenter;
+      }
+    }
+  }
+}

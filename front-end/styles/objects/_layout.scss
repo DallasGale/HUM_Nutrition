@@ -1,0 +1,35 @@
+//bootstrap overides
+.container {
+  padding-left: 0;
+  padding-right: 0;
+  @include pageWidth;
+}
+
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+// layout
+.o-page {
+
+  &-container {
+    @include pageWidth;
+    width: 100%;
+    padding: 80px 160px 20px 160px;
+  }
+
+  &-landing {
+    background: url('../images/hero-bg.png') no-repeat top center;
+    background-size: 1549px;
+    max-width: 1525px;
+    margin: 0 auto;
+    min-height: 808px;
+
+    @include respond-to(phone-down) {
+      background: url('../images/hero-bg-mb.jpg') no-repeat top center;
+      background-size: cover;
+    }
+  }
+}
