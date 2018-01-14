@@ -16,6 +16,13 @@
       margin-bottom: 134px;
       @include textCenter;
 
+      @include respond-to(phone-down) {
+        background-size: 990px;
+        background-position: bottom 117px right -260px;
+        margin-bottom: 0;
+      }
+
+
       &--paragraph {
         padding-bottom: 55px;
       }
@@ -26,11 +33,20 @@
         margin-bottom: 126px;
         list-style: none;
 
+        @include respond-to(phone-down) {
+          padding-left: 0;
+        }
+
         &--items {
           padding: 10px 0 10px 52px;
           font-family: 'Neutraface';
           @include textLeft;
           @include rem(font-size, 2.2rem);
+
+          @include respond-to(phone-down) {
+            padding: 10px 30px 10px 60px;
+            @include rem(font-size, 1.8rem);
+          }
 
           .bullet {
             background: url('../images/icons/icon-sprite.gif');
@@ -80,6 +96,10 @@
           max-width: 70%;
           margin: 0 auto;
 
+          @include respond-to(phone-down) {
+            max-width: 100%;
+          }
+
           &__title {
             font-family: 'Neutraface';
             padding: 33px 0 33px 0;
@@ -87,6 +107,8 @@
             @include textUppercase;
 
             @include respond-to(phone-down) {
+              padding-top: 30px;
+              padding-bottom: 30px;
               @include rem(font-size, 1.4rem);
             }
 
@@ -196,6 +218,10 @@
 
           &-table {
             height: 105px;
+
+            @include respond-to(phone-down) {
+              width: 100%;
+            }
           }
         }
 

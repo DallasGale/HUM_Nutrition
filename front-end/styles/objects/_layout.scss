@@ -3,6 +3,11 @@
   padding-left: 0;
   padding-right: 0;
   @include pageWidth;
+
+  @include respond-to(phone-down) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 
 
@@ -28,8 +33,9 @@
     min-height: 808px;
 
     @include respond-to(phone-down) {
-      background: url('../images/hero-bg-mb.jpg') no-repeat top center;
-      background-size: cover;
+      background: url('../images/hero-bg-mb.jpg') no-repeat top 140px center;
+      background-size: 1560px;
+      min-height: 1038px;
     }
   }
 }

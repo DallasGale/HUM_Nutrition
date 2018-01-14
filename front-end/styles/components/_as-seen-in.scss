@@ -18,6 +18,29 @@
         list-style: none;
         padding-left: 0;
 
+        @include respond-to(phone-down) {
+          width: 80%;
+          max-width: 300px;
+          margin: 0 auto;
+
+          .col-xs-1,
+          .col-xs-2,
+          .col-xs-3,
+          .col-xs-4,
+          .col-xs-5,
+          .col-xs-6,
+          .col-xs-7,
+          .col-xs-8,
+          .col-xs-9,
+          .col-xs-10,
+          .col-xs-11,
+          .col-xs-12 {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+        }
+
         li {
           display: inline-block;
         }
@@ -34,6 +57,11 @@
         @include textIndent;
         @include hover-transition;
 
+        @include respond-to(phone-down) {
+          margin: 0 auto;
+          display: block;
+        }
+
         &:hover {
           @include shadowSpreadLight;
         }
@@ -41,31 +69,60 @@
         &__refinery {
           background-position: top left -7px;
           width: 60px;
+
+          @include respond-to(phone-down) {
+            background-position: top left -8px;
+            width: 57px;
+          }
         }
 
         &__us {
           background-position: top left -69px;
           width: 78px;
+
+          @include respond-to(phone-down) {
+            background-position: top left -74px;
+            background-position: top left -80px;
+            width: 68px;
+          }
         }
 
         &__bazaar {
           background-position: top left -153px;
           width: 149px;
+
+          @include respond-to(phone-down) {
+            background-position: top left -164px;
+            width: 133px;
+          }
         }
 
         &__nylon {
           background-position: top left -310px;
           width: 190px;
+
+          @include respond-to(phone-down) {
+            background-position: top 9px left -244px;
+            background-size: 740px;
+            width: 135px;
+          }
         }
 
         &__coveteur {
-          background-position: top left -509px;
-          width: 195px;
+          background-position: top 5px left -443px;
+          background-size: 830px;
+          width: 150px;
         }
 
         &__mclaire {
           background-position: top left -703px;
           width: 240px;
+
+          @include respond-to(phone-down) {
+            background-position: top left -717px;
+            width: 226px;
+            
+          }
         }
       }
     }

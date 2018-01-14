@@ -22,19 +22,23 @@
     }
 }());
 
-// Place any jQuery/helper plugins in here.
+
+
+
+// jQuery below
 $(function() {
   console.log('jquery works');
+
+  // safari bug with show & hide ...if / else browser is safari
   if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-    // alert('Its Safari');
-    $('.c-callout-hidden').css({
-      transform: translateY(0)
-    })
+
+    console.log('Its Safari');
+
   } else {
 
     // show & hide callout
     let prev = 30;
-    const $window = $(window);
+    var $window = $(window);
     const el = $('#c-callout');
 
     $window.on('scroll', () => {
@@ -42,9 +46,50 @@ $(function() {
           el.toggleClass('c-callout-hidden', scrollTop > prev);
           prev =  scrollTop;
     });
-
-
   }
+
+
+    // add bootstrap grid class to magazine logos <li> for mobile
+
+    var $window = $(window);
+
+    var refinery = $('#refinery-magazine'),
+        us = $('#us-magazine'),
+        bazaar = $('#bazzar-magazine'),
+        nylon = $('#nylon-magazine'),
+        coveteur = $('#coveteur-magazine'),
+        mclair = $('#mclaire-magazine');
+
+    var mobileClasss = () => {
+        var refineryMb = refinery.addClass('col-xs-2');
+        var usMb = us.addClass('col-xs-4');
+        var bazaarMb = bazaar.addClass('col-xs-6');
+        var nylonMb = nylon.addClass('col-xs-6');
+        var coveteurMb = coveteur.addClass('col-xs-6');
+        var mclairMb = mclair.addClass('col-xs-12');
+        return [
+          refineryMb,
+          usMb,
+          bazaarMb,
+          nylonMb,
+          coveteurMb,
+          mclairMb
+        ]
+    };
+
+    $window.resize(function resize() {
+      if ($window.width() < 768) {
+          console.log('< 768');
+          return mobileClasss();
+
+      }
+        refinery.removeClass('col-xs-2'),
+        us.removeClass('col-xs-4'),
+        bazaar.removeClass('col-xs-6'),
+        nylon.removeClass('col-xs-6'),
+        coveteur.removeClass('col-xs-6'),
+        mclair.removeClass('col-xs-12');
+    }).trigger('resize');
 
 
 

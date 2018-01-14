@@ -26,8 +26,8 @@
   border: 0;
 
   @include respond-to(tablet-down) {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -55,11 +55,11 @@
       @include textIndent;
 
       @include respond-to(phone-down){
-        max-width: 315px;
+        max-width: 225px;
         background-size: 90%;
         min-height: 0;
         height: 80px;
-        background-position: left 20px top 10px;
+        background-position: left top 20px;
       }
     }
 
